@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
 
-//reset css
+//reset styles
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -41,7 +41,8 @@ ol, ul {
 }
 
 $bg-dark: #232326;
-$font: #D7D7DB;
+$text: #D7D7DB;
+$light-text: #A1A1A9;
 $img-bg: #bc8aea;
 $menu-hover: #2f2f2fc1;
 $divider-color: #313136;
@@ -52,13 +53,14 @@ body {
     background-color: $bg-dark;
     font-family: 'Catamaran', sans-serif;
     display: flex;
+    color: $text;
 }
 
 header{
     margin-top: 75px;
     height: 83vh;
     width: 23%;
-    color: $font;
+    color: $text;
     position: relative;
 
     .logo{
@@ -73,9 +75,9 @@ header{
         }
 
         .title{
-            margin-left: 20px;
-
-            h3{
+            margin-left: 15px;
+            margin-top: 8px;
+            span{
                 font-size: 1.2rem;
                 font-weight: bold;
             }
@@ -89,7 +91,7 @@ header{
 
     nav{
         margin-top: 25px;
-        margin-left: 15px;
+        margin-left: 16px;
 
         ul{
           li{
@@ -97,7 +99,7 @@ header{
             margin: 3px 0;
             a{
                 font-size: 1rem;
-                color: $font;
+                color: $text;
                 text-decoration: none;
                 padding: 3px 8px;
                 border-radius: 7px;
@@ -119,11 +121,11 @@ header{
     .signature{
         position: absolute;
         bottom: 10px;
-        left: 15px;
+        left: 45px;
         font-size: .9rem;
         line-height: 1.5;
         background-color:  $menu-hover;
-        padding: 7px 10px;
+        padding: 8px 10px;
         border-radius: 5px;
         text-align: center;
     }
@@ -147,7 +149,7 @@ main{
 
         .font-icons{
             margin-left: 30px;
-            fill: $font;
+            fill: $text;
         }
     }
 
@@ -165,11 +167,31 @@ main{
                
             }
         }
+
+        h1{
+            font-size: 2rem;
+        }
+
+        .welcome{
+            font-size: 1.5rem;
+            margin-top:20px;
+            color: $light-text;
+        }
+
+        .social-button{
+            padding: 10px 10px;
+            border-radius: 7px;
+            background-color: #1f1f21;
+            text-decoration: none;
+            &:hover{
+                background-color: rgba(#1f1f21, 0.93);
+            }
+        }
     }
 }
 
 .divider{
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: $divider-color;
 }
