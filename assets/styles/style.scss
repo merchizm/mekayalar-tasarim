@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
+//reset styles
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+// styles
+
+@mixin flex-display($display, $align-items, $justify-content) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+$bg-dark: #232326;
+$text: #D7D7DB;
+$light-text: #A1A1A9;
+$img-bg: #bc8aea;
+$menu-hover: #2f2f2fc1;
+$divider-color: #313136;
+
+body {
+  line-height: 1;
+  padding: 0 100px;
+  background-color: $bg-dark;
+  font-family: 'Catamaran', sans-serif;
+  display: flex;
+  color: $text;
+}
+
+header {
+  margin-top: 75px;
+  height: 83vh;
+  width: 23%;
+  color: $text;
+  position: relative;
+
+  .logo {
+    padding: 10px 15px;
+    @include flex-display(flex, center, start);
+
+
+    img {
+      width: 70px;
+      border-radius: 50%;
+      background-color: $img-bg;
+    }
+
+    .title {
+      margin-left: 15px;
+      margin-top: 8px;
+
+      span {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: .8rem;
+        margin: 5px 0;
+      }
+    }
+  }
+
+  nav {
+    margin-top: 25px;
+    margin-left: 16px;
+
+    ul {
+      li {
+        padding: 10px;
+        margin: 3px 0;
+
+        a {
+          font-size: 1rem;
+          color: $text;
+          text-decoration: none;
+          padding: 3px 8px;
+          border-radius: 7px;
+
+          &:hover {
+            color: #fff;
+            background-color: $menu-hover;
+          }
+        }
+
+        .active {
+          color: #fff;
+          background-color: $menu-hover;
+        }
+      }
+    }
+  }
+
+  .signature {
+    position: absolute;
+    bottom: 10px;
+    left: 45px;
+    font-size: .9rem;
+    line-height: 1.5;
+    background-color: $menu-hover;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
+
+main {
+  margin-top: 30px;
+  margin-left: 15px;
+  width: 55vw;
+
+  .buttons {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: transparent;
+      border: 0;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        border-radius: 50%;
+        background-color: $menu-hover;
+      }
+    }
+
+    .font-buttons {
+      margin-left: 30px;
+      fill: $text;
+      display: flex;
+
+      button {
+        border-radius: .5rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.25rem;
+        width: 2.25rem;
+
+        &:hover {
+          border-radius: 10%;
+        }
+      }
+    }
+  }
+
+  .container {
+    margin-top: 50px;
+    font-size: 16px;
+    .content {
+      margin: 50px 0;
+
+      h2 {
+        font-size: 1.3em;
+        color: #fafafa;
+        margin-bottom: 10px;
+      }
+
+      span {
+        color: #71717A;
+      }
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .welcome {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: $light-text;
+    }
+
+    .social-button {
+      padding: 10px 10px;
+      border-radius: 7px;
+      background-color: #1f1f21;
+      text-decoration: none;
+
+      &:hover {
+        background-color: rgba(#1f1f21, 0.93);
+      }
+    }
+  }
+}
+
+#screen_saver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background-color: $bg-dark;
+  span[id=korisirbiz]{
+    color: $text;
+    font-size: 14vmin !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px !important;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 4vmin !important;
+    margin: 5px !important;
+  }
+  a.second {
+    color: $light-text !important;
+    font-weight: 500 !important;
+    text-decoration: none;
+  }
+  span.first {
+    bottom: 6vmin !important;
+    color: $text !important; }
+}
+
+
+.blur-out {
+  animation: blur-out 0.5s infinite linear both;
+}
+
+@keyframes blur-out {
+  0% {
+    filter: blur(.01px);
+  }
+  100% {
+    filter: blur(12px);
+    opacity: 0
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: $divider-color;
+}
