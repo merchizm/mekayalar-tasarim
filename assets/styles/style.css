@@ -120,18 +120,39 @@ main .buttons button {
   font-size: 1.5rem;
   cursor: pointer;
 }
-main .buttons .font-icons {
+main .buttons button:focus {
+  outline: none;
+}
+main .buttons button:hover {
+  border-radius: 50%;
+  background-color: #2f2f2fc1;
+}
+main .buttons .font-buttons {
   margin-left: 30px;
   fill: #D7D7DB;
+  display: flex;
+}
+main .buttons .font-buttons button {
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+main .buttons .font-buttons button:hover {
+  border-radius: 10%;
 }
 main .container {
   margin-top: 50px;
+  font-size: 16px;
 }
 main .container .content {
   margin: 50px 0;
 }
 main .container .content h2 {
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: #fafafa;
   margin-bottom: 10px;
 }
@@ -139,10 +160,10 @@ main .container .content span {
   color: #71717A;
 }
 main .container h1 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 main .container .welcome {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   margin-top: 20px;
   color: #A1A1A9;
 }
@@ -156,6 +177,54 @@ main .container .social-button:hover {
   background-color: rgba(31, 31, 33, 0.93);
 }
 
+#screen_saver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background-color: #232326;
+}
+#screen_saver span[id=korisirbiz] {
+  color: #D7D7DB;
+  font-size: 14vmin !important;
+  font-weight: 500 !important;
+  letter-spacing: 2px !important;
+}
+#screen_saver .bottom {
+  position: absolute;
+  bottom: 4vmin !important;
+  margin: 5px !important;
+}
+#screen_saver a.second {
+  color: #A1A1A9 !important;
+  font-weight: 500 !important;
+  text-decoration: none;
+}
+#screen_saver span.first {
+  bottom: 6vmin !important;
+  color: #D7D7DB !important;
+}
+
+.blur-out {
+  animation: blur-out 0.5s infinite linear both;
+}
+
+@keyframes blur-out {
+  0% {
+    filter: blur(0.01px);
+  }
+  100% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+}
 .divider {
   width: 100%;
   height: 2px;
