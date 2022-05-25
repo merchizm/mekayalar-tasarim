@@ -124,8 +124,8 @@ header {
   .signature {
     position: absolute;
     bottom: 10px;
-    left: 45px;
-    font-size: .9rem;
+    left: 25px;
+    font-size: 1rem;
     line-height: 1.5;
     background-color: $menu-hover;
     padding: 8px 10px;
@@ -202,10 +202,37 @@ main {
       font-size: 2em;
     }
 
-    .welcome {
-      font-size: 1.5em;
-      margin-top: 20px;
-      color: $light-text;
+    .text{
+      .welcome {
+        font-size: 1.5em;
+        margin-top: 20px;
+        color: $light-text;
+      }
+
+      .socials{
+        margin: 10px 0;
+
+        a{
+          text-decoration: none;
+          svg{
+            width: 25px;
+            margin-right: 5px;
+            padding: 5px;
+            border: 2px solid $divider-color;
+            border-radius: 50%;
+
+            &:hover{
+              border-color: #3b3b3b;
+              path{
+                fill: #fff;
+              }
+            }
+            path{
+              fill: $text;
+            }
+          }
+        }
+      }
     }
 
     .social-button {
