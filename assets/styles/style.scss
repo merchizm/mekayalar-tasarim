@@ -139,6 +139,8 @@ main {
   margin-top: 30px;
   margin-left: 15px;
   width: 55vw;
+  overflow-y: scroll;
+
 
   .buttons {
     padding: 5px;
@@ -161,10 +163,16 @@ main {
       }
     }
 
+    .spotify{
+      &:hover{
+        background-color: transparent;
+      }
+    }
+
     .font-buttons {
-      margin-left: 30px;
       fill: $text;
       display: flex;
+      justify-content: flex-end;
 
       button {
         border-radius: .5rem;
@@ -180,6 +188,50 @@ main {
         }
       }
     }
+
+    .buttons-right{
+      display: flex;
+      align-items: center;
+      .font-buttons {
+        width: 100px;
+        margin-left: 10px;
+        fill: $text;
+        display: flex;
+        justify-content: flex-end;
+  
+        button {
+          border-radius: .5rem;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2.25rem;
+          width: 2.25rem;
+  
+          &:hover {
+            border-radius: 10%;
+          }
+        }
+      }
+
+      .icons{
+        display: flex;
+        button {
+          border-radius: .5rem;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2.25rem;
+          width: 2.25rem;
+  
+          &:hover {
+            border-radius: 10%;
+          }
+        }
+      }
+    }
+    
   }
 
   .container {
@@ -321,6 +373,10 @@ main {
       &:hover {
         background-color: rgba(#1f1f21, 0.93);
       }
+    }
+
+    .image-grid {
+      display: grid; 
     }
   }
 }
